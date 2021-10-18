@@ -1,0 +1,15 @@
+spring:
+  kafka:
+    properties:
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: ${MARKETBOM2_CONFLUENT_KAFKA_CONFIG}
+      bootstrap:
+        servers: ${MARKETBOM2_CONFLUENT_KAFKA_HOST}
+      security:
+        protocol: SASL_SSL
+    consumer:
+      topic:
+        name: boroTest
+        group-id: borogroup
